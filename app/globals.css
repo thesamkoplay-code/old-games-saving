@@ -1,0 +1,204 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(1060px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.top,
+.list-head,
+.file-row,
+form,
+.progress-text {
+  display: flex;
+  align-items: center;
+}
+
+.top,
+.list-head {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #047857;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.panel,
+.file-row {
+  border: 1px solid #d9e2ef;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.upload-panel {
+  padding: 20px;
+}
+
+form {
+  gap: 12px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  flex: 1 1 220px;
+  gap: 8px;
+  min-width: 0;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+}
+
+button,
+.download {
+  min-height: 44px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 16px;
+  background: #0f766e;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+button:hover,
+.download:hover {
+  background: #115e59;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.progress-wrap {
+  margin-top: 18px;
+}
+
+.progress-text {
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+progress {
+  width: 100%;
+  height: 14px;
+}
+
+.message {
+  min-height: 22px;
+  margin: 14px 0 0;
+  color: #047857;
+  font-weight: 700;
+}
+
+.message.error {
+  color: #b91c1c;
+}
+
+.list-head {
+  margin: 30px 0 12px;
+}
+
+.list-head span {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.files {
+  display: grid;
+  gap: 10px;
+}
+
+.file-row {
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+}
+
+.file-main {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.file-main strong,
+.file-main span {
+  overflow-wrap: anywhere;
+}
+
+.file-main span,
+.empty {
+  color: #64748b;
+}
+
+.empty {
+  padding: 24px 0;
+}
+
+@media (max-width: 880px) {
+  form,
+  .file-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  button,
+  .download {
+    width: 100%;
+  }
+}
