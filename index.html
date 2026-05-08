@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soubory ke stazeni</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="top">
+        <div>
+          <p class="eyebrow">Sdileni souboru</p>
+          <h1>Soubory ke stazeni</h1>
+        </div>
+        <button id="refresh" type="button">Obnovit</button>
+      </section>
+
+      <section class="panel upload-panel">
+        <form id="uploadForm">
+          <label>
+            <span>Soubor</span>
+            <input id="fileInput" name="file" type="file" required>
+          </label>
+          <label>
+            <span>Nazev pro lidi</span>
+            <input id="nameInput" name="name" type="text" maxlength="120" placeholder="napr. dokument.pdf">
+          </label>
+          <label>
+            <span>Heslo pro nahravani</span>
+            <input id="passwordInput" name="password" type="password" autocomplete="current-password">
+          </label>
+          <button id="uploadButton" type="submit">Nahrat</button>
+        </form>
+
+        <div id="progressWrap" class="progress-wrap" hidden>
+          <div class="progress-text">
+            <span id="progressLabel">Nahravam...</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <progress id="progress" value="0" max="100"></progress>
+        </div>
+
+        <p id="message" class="message" role="status"></p>
+      </section>
+
+      <section class="list-head">
+        <h2>Soubory</h2>
+        <span id="count"></span>
+      </section>
+
+      <section id="files" class="files"></section>
+    </main>
+
+    <template id="fileTemplate">
+      <article class="file-row">
+        <div class="file-main">
+          <strong></strong>
+          <span></span>
+        </div>
+        <a class="download">Stahnout</a>
+      </article>
+    </template>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
