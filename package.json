@@ -1,0 +1,12 @@
+{
+  "name": "old-games-saving",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local archive site for old game saves, files, photos, descriptions, and discussions.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
