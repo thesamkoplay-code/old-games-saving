@@ -1,7 +1,0 @@
-{
-  "salt": "94e42efa834208b98efe7dfef957d1f4",
-  "hash": "44b27af5dba49174937d0f7a64294428402cdf2282a067e32fd9c10f85c0d715",
-  "iterations": 250000,
-  "keylen": 32,
-  "digest": "sha256"
-}
